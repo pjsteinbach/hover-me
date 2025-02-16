@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&family=Tilt+Neon&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body main {
+  height: 100vh;
+  background-color: #f5f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main h1 {
+  font-family: "Staatliches", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+body main .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-items: center;
+  height: 600px;
+  width: 800px;
+}
+body main .grid-container button {
+  height: 92px;
+  width: 180px;
+  color: #f5f4f4;
+  background-color: #04c8c1;
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn11 {
+  background-image: linear-gradient(135deg, #04c8c1, #416561);
+}
+.btn11:hover {
+  animation: hue-saturation 4000ms linear infinite;
+}
+
+@keyframes hue-saturation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.btn12 {
+  transition: all 400ms ease-in-out;
+}
+.btn12:hover {
+  filter: blur(1.2px) brightness(1.1);
+  font-size: 1.3rem;
+  scale: 1.02;
+}
+
+.btn13 {
+  position: relative;
+  overflow: hidden;
+}
+.btn13 div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.btn13 div::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0px);
+  left: calc(50% - 0px);
+  width: 0px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #416561;
+  transition: all 400ms ease-in;
+}
+.btn13:hover div::before {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #416561;
+}
+.btn13 span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn21 {
+  position: relative;
+  overflow: hidden;
+}
+.btn21:hover::before {
+  animation: move 3s ease-in-out both infinite;
+}
+.btn21:hover::after {
+  animation: glow 3s ease-in-out both infinite;
+}
+.btn21::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(80deg, transparent 0%, transparent 45%, #f5f4f4 60%, #f5f4f4 65%, transparent 80%, transparent 100%);
+  transform: translateX(-200px);
+  mix-blend-mode: screen;
+}
+.btn21::after {
+  content: "Reflex";
+  position: absolute;
+  top: 34px;
+  left: 60px;
+  filter: brightness(0.9);
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-150px);
+  }
+  40% {
+    transform: translateX(150px);
+  }
+  60% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(-150px);
+  }
+}
+@keyframes glow {
+  0% {
+    filter: brightness(0.9);
+  }
+  20% {
+    filter: brightness(0.9);
+    transform: scale(1);
+  }
+  22% {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+  }
+  24% {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+  }
+  30% {
+    filter: brightness(0.9);
+    transform: scale(1);
+  }
+  75% {
+    filter: brightness(0.9);
+    transform: scale(1);
+  }
+  79% {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+  }
+  83% {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+  }
+  86% {
+    filter: brightness(0.9);
+    transform: scale(1);
+  }
+  100% {
+    filter: brightness(0.9);
+  }
+}
+.btn22 {
+  position: relative;
+  overflow: hidden;
+}
+.btn22 .screws {
+  position: absolute;
+  width: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #bbc8c8;
+  transition: all 1s linear;
+}
+.btn22 .screws::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4px);
+  left: calc(50% - 1px);
+  height: 8px;
+  width: 2px;
+  border-radius: 2px;
+  background-color: #3c4e48;
+}
+.btn22 .screws::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 4px);
+  height: 2px;
+  width: 8px;
+  border-radius: 2px;
+  background-color: #3c4e48;
+}
+.btn22 p {
+  transition: all 1s linear;
+}
+.btn22 .screw_tl {
+  top: 2px;
+  left: 2px;
+}
+.btn22 .screw_tr {
+  top: 2px;
+  right: 2px;
+}
+.btn22 .screw_bl {
+  bottom: 2px;
+  left: 2px;
+}
+.btn22 .screw_br {
+  bottom: 2px;
+  right: 2px;
+}
+.btn22:hover .screws {
+  transform: rotate(360deg);
+}
+.btn22:hover p {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 6px #3c4e48;
+}
+
+.btn23 {
+  transition: 400ms;
+}
+.btn23:hover {
+  box-shadow: 4px 4px 12px #416561;
+  filter: brightness(1.2) hue-rotate(-6deg);
+}
+
+.btn31 {
+  transition: all 400ms;
+}
+.btn31:hover {
+  filter: brightness(0.95);
+  color: #2a2727;
+}
+.btn31:hover span {
+  animation: glitch 400ms alternate infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: red -2px 0px, cyan 2px 0px;
+  }
+  66% {
+    text-shadow: red 2px 0px, cyan -2px 0px;
+  }
+  100% {
+    text-shadow: red -2px 0px, cyan 2px 0px;
+  }
+}
+.btn33 {
+  font-family: "Tilt Neon", serif;
+}
+.btn33 span {
+  display: block;
+  letter-spacing: 6px;
+  transform: scaleY(1.5);
+  color: #416561;
+}
+.btn33:hover span {
+  animation: Illuminate 1s linear alternate infinite;
+  color: #f5f4f4;
+}
+
+@keyframes Illuminate {
+  0% {
+    text-shadow: 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4;
+  }
+  1% {
+    text-shadow: 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4;
+  }
+  2% {
+    text-shadow: 0px 0px 4px #f5f4f4, 0px 0px 6px #f5f4f4, 0px 0px 8px #f5f4f4;
+  }
+  3% {
+    text-shadow: 0px 0px 4px #f5f4f4, 0px 0px 6px #f5f4f4, 0px 0px 8px #f5f4f4;
+  }
+  4% {
+    text-shadow: 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4;
+  }
+  5% {
+    text-shadow: 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4;
+  }
+  6% {
+    text-shadow: 0px 0px 4px #f5f4f4, 0px 0px 6px #f5f4f4, 0px 0px 8px #f5f4f4;
+  }
+  20% {
+    text-shadow: 0px 0px 4px #f5f4f4, 0px 0px 6px #f5f4f4, 0px 0px 8px #f5f4f4;
+  }
+  21% {
+    text-shadow: 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4;
+  }
+  25% {
+    text-shadow: 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4, 0px 0px 0px #f5f4f4;
+  }
+  26% {
+    text-shadow: 0px 0px 4px #f5f4f4, 0px 0px 6px #f5f4f4, 0px 0px 8px #f5f4f4;
+  }
+  100% {
+    text-shadow: 0px 0px 4px #f5f4f4, 0px 0px 6px #f5f4f4, 0px 0px 8px #f5f4f4;
+  }
+}/*# sourceMappingURL=style.css.map */
