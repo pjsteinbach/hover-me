@@ -58,8 +58,8 @@ body main .grid-container button {
 }
 .btn12:hover {
   filter: blur(1.2px) brightness(1.1);
-  font-size: 1.3rem;
-  scale: 1.02;
+  font-size: 1.2rem;
+  scale: 1.01;
 }
 
 .btn13 {
@@ -192,6 +192,7 @@ body main .grid-container button {
   border-radius: 50%;
   background-color: #bbc8c8;
   transition: all 1s linear;
+  box-shadow: 0px 0px 6px #3c4e48;
 }
 .btn22 .screws::before {
   content: "";
@@ -213,7 +214,7 @@ body main .grid-container button {
   border-radius: 2px;
   background-color: #3c4e48;
 }
-.btn22 p {
+.btn22 span {
   transition: all 1s linear;
 }
 .btn22 .screw_tl {
@@ -234,9 +235,11 @@ body main .grid-container button {
 }
 .btn22:hover .screws {
   transform: rotate(360deg);
+  scale: 0.8;
+  box-shadow: 0px 0px 2px #2a2727;
 }
-.btn22:hover p {
-  transform: scale(1.1);
+.btn22:hover span {
+  transform: scale(1.2);
   text-shadow: 2px 2px 6px #3c4e48;
 }
 
@@ -270,7 +273,6 @@ body main .grid-container button {
     text-shadow: red -2px 0px, cyan 2px 0px;
   }
 }
-
 .btn32:hover {
   animation: shake 400ms infinite;
 }
@@ -309,7 +311,7 @@ body main .grid-container button {
   100% {
     transform: translate(-1px, 1px);
   }
-  
+}
 .btn33 {
   font-family: "Tilt Neon", serif;
 }
@@ -361,4 +363,234 @@ body main .grid-container button {
   100% {
     text-shadow: 0px 0px 4px #f5f4f4, 0px 0px 6px #f5f4f4, 0px 0px 8px #f5f4f4;
   }
+}
+.btn41 {
+  position: relative;
+  overflow: hidden;
+  background-color: #416561 !important;
+}
+.btn41 span {
+  position: absolute;
+  top: 37%;
+  left: 38%;
+  z-index: 1;
+}
+.btn41 div {
+  z-index: -1;
+}
+.btn41 div::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: polygon(0% 0%, 66% 0%, 33% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 66% 0%, 33% 100%, 0% 100%);
+  background-color: #04c8c1;
+  transition: all 400ms ease-in-out;
+}
+.btn41 div::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-clip-path: polygon(66% 0%, 100% 0%, 100% 100%, 33% 100%);
+          clip-path: polygon(66% 0%, 100% 0%, 100% 100%, 33% 100%);
+  transition: all 400ms ease-in;
+  background-color: #04c8c1;
+}
+.btn41:hover div::before {
+  transform: translateX(-120px);
+}
+.btn41:hover div::after {
+  transform: translateX(120px);
+}
+
+.btn42 {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 400ms;
+  perspective: 500px;
+}
+.btn42::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 48px;
+  background-color: cadetblue;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+.btn42::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 92px;
+  background-color: cadetblue;
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+.btn42:hover {
+  transform: rotateY(20deg) rotateX(-10deg);
+}
+
+.btn43 {
+  position: relative;
+}
+.btn43 .corner {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: #f5f4f4;
+}
+.btn43 .ctr {
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 6px;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+.btn43 .ctr::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 0px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #f5f4f4;
+  transition: all 400ms ease-out;
+}
+.btn43 .ctr::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 0px;
+  border-radius: 4px;
+  background-color: #f5f4f4;
+  transition: all 400ms ease-out;
+}
+.btn43 .cbr {
+  bottom: 0;
+  right: 0;
+  border-radius: 6px 0 0 0;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+.btn43 .cbr::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 0px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #f5f4f4;
+  transition: all 400ms ease-out;
+}
+.btn43 .cbr::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 8px;
+  height: 0px;
+  border-radius: 4px;
+  background-color: #f5f4f4;
+  transition: all 400ms ease-out;
+}
+.btn43 .ctl {
+  top: 0;
+  left: 0;
+  border-radius: 0 0 6px 0;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+.btn43 .ctl::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 0px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #f5f4f4;
+  transition: all 400ms ease-out;
+}
+.btn43 .ctl::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 0px;
+  border-radius: 4px;
+  background-color: #f5f4f4;
+  transition: all 400ms ease-out;
+}
+.btn43 .cbl {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 6px 0 0;
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+.btn43 .cbl::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  width: 0px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #f5f4f4;
+  transition: all 400ms ease-out;
+}
+.btn43 .cbl::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  width: 8px;
+  height: 0px;
+  border-radius: 4px;
+  background-color: #f5f4f4;
+  transition: all 400ms ease-out;
+}
+.btn43:hover .corner {
+  opacity: 1;
+}
+.btn43:hover .ctr::after {
+  width: 92px;
+}
+.btn43:hover .ctr::before {
+  height: 48px;
+}
+.btn43:hover .cbr::after {
+  width: 92px;
+}
+.btn43:hover .cbr::before {
+  height: 48px;
+}
+.btn43:hover .ctl::after {
+  width: 92px;
+}
+.btn43:hover .ctl::before {
+  height: 48px;
+}
+.btn43:hover .cbl::after {
+  width: 92px;
+}
+.btn43:hover .cbl::before {
+  height: 48px;
 }/*# sourceMappingURL=style.css.map */
